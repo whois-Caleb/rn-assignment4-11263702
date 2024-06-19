@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TextInput, Image, ScrollView, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { SvgUri } from 'react-native-svg';
+import { Svg, SvgUri } from 'react-native-svg';
 import androidSafeView from './styles/androidSafeView';
 
 const App = () => {
@@ -35,10 +35,14 @@ const App = () => {
 
       <ScrollView horizontal={true} style={styles.featuredJobs} showsHorizontalScrollIndicator={false}>
         <View style={styles.featuredJobCard}>
-          <SvgUri width="24" height="24" uri="path-to-facebook-logo-svg" />
+          <View style={styles.jobInfoContainer}>
+            <View style={styles.logoContainer}>
+            <Image source={require("./assets/facebook_icon.png")} style={styles.companyLogo} />
+            </View>
           <View style={styles.jobInfo}>
             <Text style={styles.jobTitle}>Software Engineer</Text>
             <Text style={styles.company}>Facebook</Text>
+          </View>
           </View>
           <View style={styles.jobDetails}>
             <Text style={styles.salary}>$180,00</Text>
@@ -47,7 +51,7 @@ const App = () => {
         </View>
 
         <View style={styles.featuredJobCard}>
-          <SvgUri width="24" height="24" uri="path-to-google-logo-svg" />
+          <Image width="24" height="24" uri="path-to-google-logo-svg" />
           <View style={styles.jobInfo}>
             <Text style={styles.jobTitle}>Software Engineer</Text>
             <Text style={styles.company}>Google</Text>
@@ -77,8 +81,8 @@ const App = () => {
       </View>
 
       <View style={styles.popularJob}>
-        <Image width="24" height="24" source={require("./assets/beats_icon.png")} />
-        <View style={styles.popularJobInfo}>
+      <Image source={require("./assets/beats_icon.png")} style={styles.popularJobImage} />
+      <View style={styles.popularJobInfo}>
           <Text style={styles.popularJobTitle}>Product Manager</Text>
           <Text style={styles.company}>Beats</Text>
         </View>
@@ -89,8 +93,8 @@ const App = () => {
       </View>
 
       <View style={styles.popularJob}>
-        <Image width="24" height="24" source={require("./assets/facebook_icon.png")} />
-        <View style={styles.popularJobInfo}>
+      <Image source={require("./assets/facebook_icon.png")} style={styles.popularJobImage} />
+      <View style={styles.popularJobInfo}>
           <Text style={styles.popularJobTitle}>Product Manager</Text>
           <Text style={styles.company}>Facebook</Text>
         </View>
@@ -99,6 +103,67 @@ const App = () => {
           <Text style={styles.location}>Florida, US</Text>
         </View>
       </View>
+
+      <View style={styles.popularJob}>
+        <Image source={require("./assets/apple_icon.png")} style={styles.popularJobImage} />
+        <View style={styles.popularJobInfo}>
+          <Text style={styles.popularJobTitle}>Product Manager</Text>
+          <Text style={styles.company}>Apple</Text>
+        </View>
+        <View style={styles.popularJobDetails}>
+          <Text style={styles.salary}>$84,000/y</Text>
+          <Text style={styles.location}>Carlifonia, US</Text>
+        </View>
+      </View>
+
+      <View style={styles.popularJob}>
+      <Image source={require("./assets/microsoft_icon.png")} style={styles.popularJobImage} />
+      <View style={styles.popularJobInfo}>
+          <Text style={styles.popularJobTitle}>Product Manager</Text>
+          <Text style={styles.company}>Microsoft</Text>
+        </View>
+        <View style={styles.popularJobDetails}>
+          <Text style={styles.salary}>$84,000/y</Text>
+          <Text style={styles.location}>Florida, US</Text>
+        </View>
+      </View>
+
+      <View style={styles.popularJob}>
+      <Image source={require("./assets/instagram_icon.png")} style={styles.popularJobImage} />
+      <View style={styles.popularJobInfo}>
+          <Text style={styles.popularJobTitle}>Product Manager</Text>
+          <Text style={styles.company}>Instagram</Text>
+        </View>
+        <View style={styles.popularJobDetails}>
+          <Text style={styles.salary}>$84,000/y</Text>
+          <Text style={styles.location}>Florida, US</Text>
+        </View>
+      </View>
+
+      <View style={styles.popularJob}>
+      <Image source={require("./assets/whatsapp_icon.png")} style={styles.popularJobImage}/>
+      <View style={styles.popularJobInfo}>
+          <Text style={styles.popularJobTitle}>Product Manager</Text>
+          <Text style={styles.company}>WhatsApp</Text>
+        </View>
+        <View style={styles.popularJobDetails}>
+          <Text style={styles.salary}>$84,000/y</Text>
+          <Text style={styles.location}>Florida, US</Text>
+        </View>
+      </View>
+
+      <View style={styles.popularJob}>
+      <Image source={require("./assets/telegram_icon.png")} style={styles.popularJobImage} />
+      <View style={styles.popularJobInfo}>
+          <Text style={styles.popularJobTitle}>Product Manager</Text>
+          <Text style={styles.company}>Telegram</Text>
+        </View>
+        <View style={styles.popularJobDetails}>
+          <Text style={styles.salary}>$84,000/y</Text>
+          <Text style={styles.location}>Florida, US</Text>
+        </View>
+      </View>
+
     </ScrollView>
     </SafeAreaView>  );
 };
@@ -162,8 +227,24 @@ const styles = StyleSheet.create({
     backgroundColor: '#e0e0e0',
     padding: 20,
     borderRadius: 10,
-    width: 200, // Set a fixed width for the cards to enable horizontal scrolling
+    justifyContent: 'space-between',
+    width: 200,
+    height: 150,
     marginRight: 10,
+  },
+  jobInfoContainer:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  logoContainer:{
+    backgroundColor: '#0000000',
+    objectFit: 'contain',
+    borderRadius: 20,
+  },
+  companyLogo:{
+    objectFit: 'contain',
+    height: 20,
+    width: 20,
   },
   jobInfo: {
     marginTop: 10,
@@ -177,6 +258,8 @@ const styles = StyleSheet.create({
   },
   jobDetails: {
     marginTop: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   salary: {
     fontSize: 16,
@@ -192,6 +275,12 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     marginBottom: 10,
+    height: 70,
+  },
+  popularJobImage: {
+    height: 41,
+    width: 35,
+    objectFit: 'contain'
   },
   popularJobInfo: {
     flex: 1,
