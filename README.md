@@ -90,9 +90,9 @@ This is a basic implementation of a job search app using Expo React Native.
 
   ## Screenshots
 
-  ![Alt text](Assignment4\assets\photo_2024-06-19_23-21-40.jpg "App Screenshot")
-  ![Alt text](Assignment4\assets\photo_2024-06-19_23-22-11.jpg "App Screenshot")
-  ![Alt text](Assignment4\assets\photo_2024-06-19_23-22-16.jpg "App Screenshot")
-  ![Alt text](Assignment4\assets\photo_2024-06-19_23-22-21.jpg "App Screenshot")
-  ![Alt text](Assignment4\assets\photo_2024-06-19_23-22-25.jpg "App Screenshot")
+  ![Alt text](Assignment4/assets/photo_2024-06-19_23-21-40.jpg "App Screenshot")
+  ![Alt text](Assignment4/assets/photo_2024-06-19_23-22-11.jpg "App Screenshot")
+  ![Alt text](Assignment4/assets/photo_2024-06-19_23-22-16.jpg "App Screenshot")
+  ![Alt text](Assignment4/assets/photo_2024-06-19_23-22-21.jpg "App Screenshot")
+  ![Alt text](Assignment4/assets/photo_2024-06-19_23-22-25.jpg "App Screenshot")
 
