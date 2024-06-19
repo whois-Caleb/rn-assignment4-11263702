@@ -45,22 +45,123 @@ const App = () => {
           </View>
           </View>
           <View style={styles.jobDetails}>
-            <Text style={styles.salary}>$180,00</Text>
-            <Text style={styles.location}>Accra, Ghana</Text>
+            <Text style={styles.featuredSalary}>$18,000</Text>
+            <Text style={styles.featuredJobLocation}>Accra, Ghana</Text>
           </View>
         </View>
 
-        <View style={styles.featuredJobCard}>
-          <Image width="24" height="24" uri="path-to-google-logo-svg" />
+        <View style={[styles.featuredJobCard, {backgroundColor: '#04284a'}]}>
+          <View style={styles.jobInfoContainer}>
+            <View style={styles.logoContainer}>
+            <Image source={require("./assets/google_icon.png")} style={styles.companyLogo} />
+            </View>
           <View style={styles.jobInfo}>
-            <Text style={styles.jobTitle}>Software Engineer</Text>
+            <Text style={styles.jobTitle}>Project Manager</Text>
             <Text style={styles.company}>Google</Text>
           </View>
+          </View>
           <View style={styles.jobDetails}>
-            <Text style={styles.salary}>$160,00</Text>
-            <Text style={styles.location}>California, US</Text>
+            <Text style={styles.featuredSalary}>$20,000</Text>
+            <Text style={styles.featuredJobLocation}>Kumasi, Ghana</Text>
           </View>
         </View>
+
+        <View style={[styles.featuredJobCard, {backgroundColor: '#4895e9'}]}>
+          <View style={styles.jobInfoContainer}>
+            <View style={styles.logoContainer}>
+            <Image source={require("./assets/amazon_icon.png")} style={styles.companyLogo} />
+            </View>
+          <View style={styles.jobInfo}>
+            <Text style={styles.jobTitle}>Product Tester</Text>
+            <Text style={styles.company}>Amazon</Text>
+          </View>
+          </View>
+          <View style={styles.jobDetails}>
+            <Text style={styles.featuredSalary}>$15,000</Text>
+            <Text style={styles.featuredJobLocation}>Cape Coast, Ghana</Text>
+          </View>
+        </View>
+
+        <View style={[styles.featuredJobCard, {backgroundColor: '#0fd9f0'}]}>
+          <View style={styles.jobInfoContainer}>
+            <View style={styles.logoContainer}>
+            <Image source={require("./assets/x_icon.png")} style={styles.companyLogo} />
+            </View>
+          <View style={styles.jobInfo}>
+            <Text style={styles.jobTitle}>Senior Developer</Text>
+            <Text style={styles.company}>X</Text>
+          </View>
+          </View>
+          <View style={styles.jobDetails}>
+            <Text style={styles.featuredSalary}>$40,000</Text>
+            <Text style={styles.featuredJobLocation}>Colarado, US</Text>
+          </View>
+        </View>
+
+        <View style={[styles.featuredJobCard, {backgroundColor: '#5386e4'}]}>
+          <View style={styles.jobInfoContainer}>
+            <View style={styles.logoContainer}>
+            <Image source={require("./assets/linkedin_icon.png")} style={styles.companyLogo} />
+            </View>
+          <View style={styles.jobInfo}>
+            <Text style={styles.jobTitle}>Junior Developer</Text>
+            <Text style={styles.company}>LinkedIn</Text>
+          </View>
+          </View>
+          <View style={styles.jobDetails}>
+            <Text style={styles.featuredSalary}>$28,000</Text>
+            <Text style={styles.featuredJobLocation}>Tema, Ghana</Text>
+          </View>
+        </View>
+
+        <View style={[styles.featuredJobCard, {backgroundColor: '#04284a'}]}>
+          <View style={styles.jobInfoContainer}>
+            <View style={styles.logoContainer}>
+            <Image source={require("./assets/netflix_icon.png")} style={styles.companyLogo} />
+            </View>
+          <View style={styles.jobInfo}>
+            <Text style={styles.jobTitle}>Product Tester</Text>
+            <Text style={styles.company}>Netflix</Text>
+          </View>
+          </View>
+          <View style={styles.jobDetails}>
+            <Text style={styles.featuredSalary}>$17,000</Text>
+            <Text style={styles.featuredJobLocation}>Accra, Ghana</Text>
+          </View>
+        </View>
+
+        <View style={[styles.featuredJobCard, {backgroundColor: '#4895e9'}]}>
+          <View style={styles.jobInfoContainer}>
+            <View style={styles.logoContainer}>
+            <Image source={require("./assets/amazon-prime-video_icon.png")} style={styles.companyLogo} />
+            </View>
+          <View style={styles.jobInfo}>
+            <Text style={styles.jobTitle}>Project Manager</Text>
+            <Text style={styles.company}>Amazon Prime Video</Text>
+          </View>
+          </View>
+          <View style={styles.jobDetails}>
+            <Text style={styles.featuredSalary}>$34,000</Text>
+            <Text style={styles.featuredJobLocation}>Tamale, Ghana</Text>
+          </View>
+        </View>
+
+        <View style={[styles.featuredJobCard, {backgroundColor: '#0fd9f0'}]}>
+          <View style={styles.jobInfoContainer}>
+            <View style={styles.logoContainer}>
+            <Image source={require("./assets/tesla-motors_icon.png")} style={styles.companyLogo} />
+            </View>
+          <View style={styles.jobInfo}>
+            <Text style={styles.jobTitle}>Product Evaluator</Text>
+            <Text style={styles.company}>Tesla Motors</Text>
+          </View>
+          </View>
+          <View style={styles.jobDetails}>
+            <Text style={styles.featuredSalary}>$28,000</Text>
+            <Text style={styles.featuredJobLocation}>Carlifonia, US</Text>
+          </View>
+        </View>
+
       </ScrollView>
 
       <View style={styles.section}>
@@ -76,7 +177,7 @@ const App = () => {
         </View>
         <View style={styles.popularJobDetails}>
           <Text style={styles.salary}>$96,000/y</Text>
-          <Text style={styles.location}>Los Angeles, US</Text>
+          <Text style={styles.popularJobLocation}>Los Angeles, US</Text>
         </View>
       </View>
 
@@ -88,7 +189,7 @@ const App = () => {
         </View>
         <View style={styles.popularJobDetails}>
           <Text style={styles.salary}>$84,000/y</Text>
-          <Text style={styles.location}>Florida, US</Text>
+          <Text style={styles.popularJobLocation}>Florida, US</Text>
         </View>
       </View>
 
@@ -100,67 +201,67 @@ const App = () => {
         </View>
         <View style={styles.popularJobDetails}>
           <Text style={styles.salary}>$86,000/y</Text>
-          <Text style={styles.location}>Florida, US</Text>
+          <Text style={styles.popularJobLocation}>Florida, US</Text>
         </View>
       </View>
 
       <View style={styles.popularJob}>
         <Image source={require("./assets/apple_icon.png")} style={styles.popularJobImage} />
         <View style={styles.popularJobInfo}>
-          <Text style={styles.popularJobTitle}>Product Manager</Text>
+          <Text style={styles.popularJobTitle}>Senior Developer</Text>
           <Text style={styles.company}>Apple</Text>
         </View>
         <View style={styles.popularJobDetails}>
-          <Text style={styles.salary}>$84,000/y</Text>
-          <Text style={styles.location}>Carlifonia, US</Text>
+          <Text style={styles.salary}>$104,000/y</Text>
+          <Text style={styles.popularJobLocation}>Carlifonia, US</Text>
         </View>
       </View>
 
       <View style={styles.popularJob}>
       <Image source={require("./assets/microsoft_icon.png")} style={styles.popularJobImage} />
       <View style={styles.popularJobInfo}>
-          <Text style={styles.popularJobTitle}>Product Manager</Text>
+          <Text style={styles.popularJobTitle}>Product Evaluator</Text>
           <Text style={styles.company}>Microsoft</Text>
         </View>
         <View style={styles.popularJobDetails}>
-          <Text style={styles.salary}>$84,000/y</Text>
-          <Text style={styles.location}>Florida, US</Text>
+          <Text style={styles.salary}>$64,000/y</Text>
+          <Text style={styles.popularJobLocation}>Texas, US</Text>
         </View>
       </View>
 
       <View style={styles.popularJob}>
       <Image source={require("./assets/instagram_icon.png")} style={styles.popularJobImage} />
       <View style={styles.popularJobInfo}>
-          <Text style={styles.popularJobTitle}>Product Manager</Text>
+          <Text style={styles.popularJobTitle}>Sales Analyst</Text>
           <Text style={styles.company}>Instagram</Text>
         </View>
         <View style={styles.popularJobDetails}>
-          <Text style={styles.salary}>$84,000/y</Text>
-          <Text style={styles.location}>Florida, US</Text>
+          <Text style={styles.salary}>$74,000/y</Text>
+          <Text style={styles.popularJobLocation}>Los Angeles, US</Text>
         </View>
       </View>
 
       <View style={styles.popularJob}>
       <Image source={require("./assets/whatsapp_icon.png")} style={styles.popularJobImage}/>
       <View style={styles.popularJobInfo}>
-          <Text style={styles.popularJobTitle}>Product Manager</Text>
+          <Text style={styles.popularJobTitle}>Marketing Director</Text>
           <Text style={styles.company}>WhatsApp</Text>
         </View>
         <View style={styles.popularJobDetails}>
           <Text style={styles.salary}>$84,000/y</Text>
-          <Text style={styles.location}>Florida, US</Text>
+          <Text style={styles.popularJobLocation}>Florida, US</Text>
         </View>
       </View>
 
       <View style={styles.popularJob}>
       <Image source={require("./assets/telegram_icon.png")} style={styles.popularJobImage} />
       <View style={styles.popularJobInfo}>
-          <Text style={styles.popularJobTitle}>Product Manager</Text>
+          <Text style={styles.popularJobTitle}>Senior Developer</Text>
           <Text style={styles.company}>Telegram</Text>
         </View>
         <View style={styles.popularJobDetails}>
-          <Text style={styles.salary}>$84,000/y</Text>
-          <Text style={styles.location}>Florida, US</Text>
+          <Text style={styles.salary}>$102,000/y</Text>
+          <Text style={styles.popularJobLocation}>New York, US</Text>
         </View>
       </View>
 
@@ -224,12 +325,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   featuredJobCard: {
-    backgroundColor: '#e0e0e0',
+    backgroundColor: '#5386e4',
     padding: 20,
     borderRadius: 10,
     justifyContent: 'space-between',
-    width: 200,
-    height: 150,
+    width: 220,
+    height: 170,
     marginRight: 10,
   },
   jobInfoContainer:{
@@ -237,14 +338,17 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   logoContainer:{
-    backgroundColor: '#0000000',
-    objectFit: 'contain',
-    borderRadius: 20,
+    backgroundColor: '#ffffff',
+    height: 40,
+    width: 40,
+    justifyContent: 'center',
+    borderRadius: 10,
   },
   companyLogo:{
     objectFit: 'contain',
-    height: 20,
-    width: 20,
+    height: 25,
+    width: 25,
+    alignSelf: 'center',
   },
   jobInfo: {
     marginTop: 10,
@@ -252,20 +356,30 @@ const styles = StyleSheet.create({
   jobTitle: {
     fontSize: 16,
     fontWeight: 'bold',
+    color: 'white'
   },
   company: {
-    color: '#888',
+    color: '#9b9ba6',
   },
   jobDetails: {
-    marginTop: 20,
+    marginTop: 20,  
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   salary: {
     fontSize: 16,
     fontWeight: 'bold',
+    color: 'black',
   },
-  location: {
+  featuredSalary: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'white',
+  },
+  featuredJobLocation: {
+    color: 'white',
+  },
+  popularJobLocation: {
     color: '#888',
   },
   popularJob: {
@@ -275,7 +389,10 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     marginBottom: 10,
-    height: 70,
+    height: 90,
+  },
+  popularJobDetails: {
+    
   },
   popularJobImage: {
     height: 41,
