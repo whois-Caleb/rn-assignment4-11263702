@@ -86,3 +86,8 @@ This is a basic implementation of a job search app using Expo React Native.
     - Searching for specific jobs.
 
     - Viewing details of specific jobs.
+ 
+
+  ## Screenshots
+
+  ![Alt text](Assignment4/assets/Screenshots/photo_1_2024-06-01_22-49-04.jpg "App Screenshot")
